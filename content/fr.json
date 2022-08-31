@@ -1,0 +1,580 @@
+{
+  "title": "7 Wonders Duel Companion",
+  "setup": {
+    "title": "Mise en place",
+    "age_i": {
+      "title": "1️⃣ Âge I"
+    },
+    "age_ii": {
+      "title": "2️⃣ Âge II"
+    },
+    "age_iii": {
+      "title": "3️⃣ Âge III"
+    }
+  },
+  "my_turn": {
+    "title": "Tour",
+    "before": {
+      "title": "Avant mon tour",
+      "conspiracy_trigger": {
+        "title": "\uD83D\uDC79 Déclencher un complot"
+      },
+      "mythology_token": {
+        "title": "☯️ Jetons Mythologie ou Offrande"
+      }
+    },
+    "turn": {
+      "title": "Durant mon tour",
+      "build_building": {
+        "title": "🌆 Construire un bâtiment"
+      },
+      "build_great_temple": {
+        "title": "🌆 Construire un Grand Temple"
+      },
+      "senator": {
+        "title": "🌆 Recruter un sénateur"
+      },
+      "build_wonder": {
+        "title": "🌆 Construire une Merveille"
+      },
+      "earn": {
+        "title": "🌆 Défausser pour obtenir des pièces"
+      },
+      "pantheon": {
+        "title": "\uD83C\uDF8E Activer une carte du Panthéon (II & III)"
+      },
+      "conspiracy_preparation": {
+        "title": "🌆 Préparer un complot"
+      }
+    }
+  },
+  "symbols": {
+    "title": "Symboles",
+    "buildings": {
+      "title": "\uD83C\uDFDB Bâtiments",
+      "items": [
+        {
+          "desc": "La carte produit la matière première représentée.",
+          "image": "production.png"
+        },
+        {
+          "desc": "La carte produit le produit manufacturé représenté.",
+          "image": "production-2.png"
+        },
+        {
+          "desc": "La carte produit à chaque tour, pour le joueur, une unité de l’une des 3 matières premières représentées. ",
+          "image": "multiple-production.png"
+        },
+        {
+          "desc": "La carte produit à chaque tour, pour le joueur, une unité de l’un des 2 produits manufacturés représentés.",
+          "image": "multiple-production-2.png"
+        },
+        {
+          "desc": "La carte rapporte le nombre de points de victoire indiqué.",
+          "image": "points.png"
+        },
+        {
+          "desc": "La carte rapporte le symbole scientifique indiqué.",
+          "image": "science.png"
+        },
+        {
+          "desc": "La carte rapporte le nombre de boucliers indiqué.",
+          "image": "shields.png"
+        },
+        {
+          "desc": "La carte rapporte 2 pièces par Merveille construite dans la cité du joueur au moment où elle est construite.",
+          "image": "wonder-earn.png"
+        },
+        {
+          "desc": "La carte change la règle de commerce pour les 2 resources indiquées. À partir du tour suivant, le joueur achète les 2 ressources indiquées à la banque au coût fixe de 1 pièce l’unité.",
+          "image": "fix-price.png"
+        },
+        {
+          "desc": "La carte rapporte le symbole de chaînage indiqué. Lors d’un Âge suivant, le joueur pourra, grâce à ce symbole, construire gratuitement une carte qui possède ce symbole dans son coût.",
+          "image": "chain.png"
+        },
+        {
+          "desc": "La carte rapporte 3 pièces par carte de même couleur construite dans la cité du joueur au moment où elle est construite.",
+          "image": "earn.png"
+        },
+        {
+          "desc": "La carte rapporte le nombre de pièces indiqué.",
+          "image": "money.png"
+        }
+      ]
+    },
+    "wonders": {
+      "title": "\uD83C\uDFEF Merveilles",
+      "items": [
+        {
+          "title": "Le Temple d’Artémis",
+          "desc": "Le joueur prend immédiatement 12 pièces à la banque. Le joueur rejoue immédiatement un tour.",
+          "image": "artemis.png"
+        },
+        {
+          "title": "Le Circus Maximus",
+          "desc": "Le joueur place dans la défausse une carte grise (produit manufacturé) de son choix construite par son adversaire. Cette Merveille rapporte 1 bouclier. Cette Merveille rapporte 3 points de victoire.",
+          "image": "circus-maximus.png"
+        },
+        {
+          "title": "Le Colosse",
+          "desc": "Cette Merveille rapporte 2 boucliers. Cette Merveille rapporte 3 points de victoire.",
+          "image": "colosse.png"
+        },
+        {
+          "title": "Curia Julia",
+          "desc": "  Au moment où vous choisissez cette Merveille, piochez 2 cartes Complot. Choisissez-en 1 que vous placez devant vous, face cachée, et repla- cez la deuxième dans la pioche (au-dessus ou en dessous selon votre choix). Lorsque vous construisez cette Merveille, immédiatement : Déclenchez un Complot non préparé en votre possession (optionnel). Prenez 6 Pièces de la Banque. Jouez un nouveau tour.",
+          "image": "curia-julia.png"
+        },
+        {
+          "title": "Le Grand Phare",
+          "desc": "Cette Merveille produit à chaque tour, pour le joueur, une unité d’une des ressources présentées (Pierre, Argile ou Bois). Précision : Cette production n’a pas d’impact sur le coût du commerce. Cette Merveille rapporte 4 points de victoire.",
+          "image": "grand-phare.png"
+        },
+        {
+          "title": "La Grande Bibliothèque",
+          "desc": "Le joueur tire aléatoirement 3 jetons Progrès parmi ceux écartés au début de partie. Il en choisit un et remet les 2 autres dans la boîte. Cette Merveille rapporte 4 points de victoire.",
+          "image": "grande-bibliotheque.png"
+        },
+        {
+          "title": "Les Jardins Suspendus",
+          "desc": "Le joueur prend immédiatement 6 pièces à la banque. Le joueur rejoue immédiatement un tour. Cette Merveille rapporte 3 points de victoire.",
+          "image": "jardins-suspendus.png"
+        },
+        {
+          "title": "Knossos",
+          "desc": "Au moment où vous choisissez cette Merveille, placez 1 de vos cubes Influence dans une Chambre de votre choix. Lorsque vous construisez cette Merveille : Placez immédiatement 1 de vos cubes Influence dans une Chambre de votre choix. Déplacez immédiatement 1 de vos cubes Influence dans une Chambre voisine (optionnel). Gagnez 3 points de victoire à la fin de la partie.",
+          "image": "knossos.png"
+        },
+        {
+          "title": "Le Mausolée",
+          "desc": "Le joueur prend toutes les cartes défaussées depuis le début de la partie et en construit gratuitement une au choix. Cette Merveille rapporte 2 points de victoire. Précision : Les cartes écartées lors de la préparation ne font pas partie de la défausse.",
+          "image": "mausolee.png"
+        },
+        {
+          "title": "Messe",
+          "desc": "Le Messe rapporte 2 points de victoire en fin de partie. Elle permet également au joueur, au moment de sa construction, de prendre une carte face visible de la rangée supérieure de l'âge en cours, même si la carte est encore couverte, et de la poser gratuitement dans sa propre ville. On ne paie que le prix de la merveille.",
+          "image": "messe.png"
+        },
+        {
+          "title": "Le Pirée",
+          "desc": "Cette Merveille produit à chaque tour, pour le joueur, une unité de l’une des ressources présentées (Verre ou Papyrus). Précision : Cette production n’a pas d’impact sur le coût du commerce. Le joueur rejoue immédiatement un tour. Cette Merveille rapporte 2 points de victoire.",
+          "image": "piree.png"
+        },
+        {
+          "title": "Les Pyramides",
+          "desc": "Cette Merveille rapporte 9 points de victoire.",
+          "image": "pyramides.png"
+        },
+        {
+          "title": "Le Sanctuaire",
+          "desc": "Les coûts d’activation du Panthéon sont réduits de 2 Pièces pour le joueur. Le joueur rejoue immédiatement un tour.",
+          "image": "sanctuaire.png"
+        },
+        {
+          "title": "Le Sphinx",
+          "desc": "Le joueur rejoue immédiatement un tour. Cette Merveille rapporte 6 points de victoire.",
+          "image": "sphinx.png"
+        },
+        {
+          "title": "Le Théâtre Divin",
+          "desc": "Le joueur révèle l’ensemble des cartes d’un paquet Mytho- logie de son choix. Il choisit une des Divinités révélées de cette façon et l’active gratuitement. Il reconstitue ensuite un paquet, dans l’ordre de son choix, à l’aide des cartes non utilisées. Cette Merveille rapporte 2 points de victoire.",
+          "image": "theatre-divin.png"
+        },
+        {
+          "title": "La Via Appia",
+          "desc": "Le joueur prend 3 pièces de la banque. L’adversaire perd 3 pièces qui sont remises à la banque. Le joueur rejoue immédiatement un tour. Cette Merveille rapporte 3 points de victoire.",
+          "image": "villa-apia.png"
+        },
+        {
+          "title": "La Statue de Zeus",
+          "desc": "Le joueur place dans la défausse une carte marron (matière première) de son choix construite par son adversaire. Cette Merveille rapporte 1 bouclier. Cette Merveille rapporte 3 points de victoire.",
+          "image": "zeus.png"
+        }
+      ]
+    },
+    "progress": {
+      "title": "\uD83E\uDE99 Jetons de progrès",
+      "items": [
+        {
+          "title": "Agriculture",
+          "desc": "Le joueur prend immédiatement 6 pièces de la banque. Le jeton rapporte 4 points de victoire.",
+          "image": "agriculture.png"
+        },
+        {
+          "title": "Architecture",
+          "desc": "Les prochaines Merveilles construites par le joueur lui coûteront 2 ressources de moins. À chaque construction, le joueur est libre  de choisir sur quelles ressources porte la réduction.",
+          "image": "architecture.png"
+        },
+        {
+          "title": "Corruption",
+          "desc": "Tous les Sénateurs (Politiciens et Comploteurs) que vous recrutez sont désormais gratuits.",
+          "image": "corruption.png"
+        },
+        {
+          "title": "Crime organisé",
+          "desc": "Lorsque vous Complotez, conservez les 2 cartes Complot piochées et placez-les, face cachée, devant vous.",
+          "image": "crime-organise.png"
+        },
+        {
+          "title": "Économie",
+          "desc": "Le joueur récupère l’argent dépensé par son adversaire lorsqu’il achète des ressources. Attention, il s’agit uniquement de l’argent utilisé pour obtenir des ressources, pas des pièces figurant dans le coût des Bâtiments. Précision : Les réductions commerciales de votre adversaire (cartes Dépôt de Pierre, Dépôt de Bois, Dépôt d’Argile et Douanes) changent le coût d’achat mais le Progrès Économie permet à son propriétaire de récupérer les sommes dépensées.",
+          "image": "economie.png"
+        },
+        {
+          "title": "Ingénierie",
+          "desc": "Le joueur peut construire pour 1 Pièce toute carte disposant, en dessous de son coût, d’un symbole de chaînage (symbole blanc), même s’il n’a pas dans sa Cité le Bâtiment ou le jeton qui comporte ce symbole.",
+          "image": "ingenerie.png"
+        },
+        {
+          "title": "Loi",
+          "desc": "Ce jeton rapporte un symbole scientifique.",
+          "image": "loi.png"
+        },
+        {
+          "title": "Maçonnerie",
+          "desc": "Les prochaines cartes bleues construites par le joueur lui coûteront 2 ressources de moins. À chaque construction, le joueur est libre de  choisir sur quelles ressources porte la réduction.",
+          "image": "maconnerie.png"
+        },
+        {
+          "title": "Mathématiques",
+          "desc": "À la fin de la partie, le joueur marque 3 points de victoire pour  chaque jeton Progrès en sa possession. Ce Progrès rapporte lui- même 3 points de victoire.",
+          "image": "mathematique.png"
+        },
+        {
+          "title": "Mysticisme",
+          "desc": "À la fin de la partie, le joueur marque 2 points de victoire pour chaque jeton Mythologie et pour chaque jeton Offrande encore en sa possession.",
+          "image": "mysticisme.png"
+        },
+        {
+          "title": "Philosophie",
+          "desc": "Le jeton rapporte 7 points de victoire.",
+          "image": "philosophie.png"
+        },
+        {
+          "title": "Poliorcétique",
+          "desc": "À chaque fois que le joueur avance le pion Conflit sur la Piste, son adversaire perd une Pièce par case avancée.",
+          "image": "poliorcetique.png"
+        },
+        {
+          "title": "Stratégie",
+          "desc": "À partir du moment où le joueur possède la Stratégie, les pro- chaines cartes rouges qu’il construit bénéficieront de 1 bouclier  supplémentaire. Exemple : Un Bâtiment militaire avec 2 boucliers permettra donc au joueur d’avancer le pion Conflit de 3 cases en direction de la capitale adverse. Précisions : Ce Progrès ne s’applique pas aux Merveilles disposant d’un symbole bouclier. Ce Progrès est sans effet sur les cartes militaires construites avant sa mise en jeu.",
+          "image": "strategie.png"
+        },
+        {
+          "title": "Théologie",
+          "desc": "Les prochaines Merveilles construites par le joueur sont considé- rées comme ayant toutes l’effet « Rejouer ». Attention, les Merveilles qui disposent déjà de cet effet ne sont pas affectées (une même Merveille ne peut pas avoir deux fois l’effet « Rejouer »).",
+          "image": "theologie.png"
+        },
+        {
+          "title": "Urbanisme",
+          "desc": "Le joueur prend immédiatement 6 pièces de la banque. Chaque fois que le joueur construit un Bâtiment gratuitement par chaînage (condition de construction gratuite), il reçoit 4 pièces.",
+          "image": "urbanisme.png"
+        }
+      ]
+    },
+    "guilds": {
+      "title": "\uD83D\uDFEA Guildes",
+      "items": [
+        {
+          "title": "Guilde des Armateurs",
+          "desc": "Au moment où elle est construite, la carte rapporte 1 pièce au joueur par carte marron et grise dans la cité qui en possède le plus grand nombre. À la fin du jeu, cette carte rapporte 1 point de victoire  par carte marron et grise dans la cité qui en possède le plus grand nombre. Précision : Le joueur est obligé de choisir une et une seule cité pour les 2 couleurs de carte.",
+          "image": "armateurs.png"
+        },
+        {
+          "title": "Guilde des Bâtisseurs",
+          "desc": "À la fin du jeu, cette carte rapporte 2 points de victoire  par Merveille construite dans la cité qui en possède le plus grand nombre.",
+          "image": "batisseurs.png"
+        },
+        {
+          "title": "Guilde des Commerçants",
+          "desc": "Au moment où elle est construite, la carte rapporte 1 pièce au joueur par carte jaune dans la cité qui en possède le plus grand nombre. À la fin du jeu, cette carte rapporte 1 point de victoire par  carte jaune dans la cité qui en possède le plus grand nombre.",
+          "image": "commercants.png"
+        },
+        {
+          "title": "Guilde des Magistrats",
+          "desc": "Au moment où elle est construite, la carte rapporte 1 pièce au joueur par carte bleue dans la cité qui en possède le plus grand nombre. À la fin du jeu, cette carte rapporte 1 point de victoire par  carte bleue dans la cité qui en possède le plus grand nombre.",
+          "image": "magistrats.png"
+        },
+        {
+          "title": "Guilde des Scientifiques",
+          "desc": "Au moment où elle est construite, la carte rapporte 1 pièce au joueur par carte verte dans la cité qui en possède le plus grand nombre. À la fin du jeu, cette carte rapporte 1 point de victoire par  carte verte dans la cité qui en possède le plus grand nombre.",
+          "image": "scientifiques.png"
+        },
+        {
+          "title": "Guilde des Tacticiens",
+          "desc": "Au moment où elle est construite, la carte rapporte 1 pièce au joueur par carte rouge dans la cité qui en possède le plus grand nombre. À la fin du jeu, cette carte rapporte 1 point de victoire par  carte rouge dans la cité qui en possède le plus grand nombre.",
+          "image": "tacticiens.png"
+        },
+        {
+          "title": "Guilde des Usuriers",
+          "desc": "À la fin du jeu, cette carte rapporte 1 point de victoire par  lot de 3 pièces dans la cité la plus riche.",
+          "image": "usuriers.png"
+        }
+      ]
+    },
+    "gods": {
+      "title": "\uD83C\uDF8E Dieux",
+      "items": [
+        {
+          "title": "Porte",
+          "desc": "Attention, le coût d’activation de la Porte correspond au double du coût d’activation normal de l’emplacement où elle se trouve.Le joueur révèle la première carte Divinité de chaque paquet Mythologie. Il choisit une Divinité révélée et l’active gratuitement. Il replace face cachée les autres Divinités sur leurs paquets respectifs.",
+          "image": "door.png"
+        },
+        {
+          "title": "Enki",
+          "desc": "Au moment où Enki est révélé, tirez aléatoirement 2 jetons Progrès parmi ceux écartés au début de partie. Ces jetons sont posés face visible sur la carte Enki. Lorsqu’un joueur invoque Enki, il choisit l’un des deux jetons Progrès. L’autre jeton est remis dans la boîte avec ceux écartés en début de partie.",
+          "image": "enki.png",
+          "color": "green"
+        },
+        {
+          "title": "Ishtar",
+          "desc": "La Divinité octroie le symbole scientifique indiqué (iden- tique à celui du jeton Progrès Loi).",
+          "image": "ishtar.png",
+          "color": "green"
+        },
+        {
+          "title": "Nisaba",
+          "desc": "Le joueur place immédiatement le jeton Serpent sur une carte verte adverse. Nisaba rapporte le symbole scientifique indiqué sur la carte.",
+          "image": "nisaba.png",
+          "color": "green"
+        },
+        {
+          "title": "Astarté",
+          "desc": "Le joueur place 7 Pièces de la Banque sur la carte Astarté. Elles ne font pas partie du Trésor de sa Cité, elles sont donc protégées contre les pertes monétaires. Il est possible de les dépenser normalement. À la fin de la partie, chaque Pièce présente sur la carte Astarté rapporte 1 point de victoire au joueur.",
+          "image": "astarte.png",
+          "color": "yellow"
+        },
+        {
+          "title": "Baal",
+          "desc": "Le joueur vole une carte marron ou grise construite par l’adversaire, elle rejoint les cartes de sa Cité.",
+          "image": "baal.png",
+          "color": "yellow"
+        },
+        {
+          "title": "Tanit",
+          "desc": "Le joueur prend 12 Pièces à la Banque.",
+          "image": "tanit.png",
+          "color": "yellow"
+        },
+        {
+          "title": "Aphrodite",
+          "desc": "Cette Divinité rapporte 9 points de victoire.",
+          "image": "aphrodite.png",
+          "color": "blue"
+        },
+        {
+          "title": "Hadès",
+          "desc": "Le joueur prend toutes les cartes défaussées depuis le début de la partie et en construit gratuitement une au choix.",
+          "image": "hades.png",
+          "color": "blue"
+        },
+        {
+          "title": "Zeus",
+          "desc": "Le joueur place dans la défausse une carte de son choix (visible ou cachée) présente dans la structure et gagne l’éventuel jeton présent sur cette dernière.",
+          "image": "zeus.png",
+          "color": "blue"
+        },
+        {
+          "title": "Anubis",
+          "desc": "Le joueur défausse une carte indiquant la construction d’une Merveille (adverse ou lui appartenant). Le joueur ne perd pas les effets immédiats précé- demment octroyés par cette dernière (Pièces, jeton Progrès, carte construite ou défaussée, effet Rejouer). Il est possible de reconstruire cette Merveille et ainsi d’en appliquer à nouveau les effets.",
+          "image": "anubis.png",
+          "color": "gray"
+        },
+        {
+          "title": "Isis",
+          "desc": "Le joueur choisit une carte de la défausse et construit gratuitement une de ses Mer- veilles à l’aide de cette dernière.",
+          "image": "isis.png",
+          "color": "gray"
+        },
+        {
+          "title": "Râ",
+          "desc": "Le joueur vole une Merveille adverse qui n’a pas encore été construite, elle rejoint ses Merveilles.",
+          "image": "ra.png",
+          "color": "gray"
+        },
+        {
+          "title": "Mars",
+          "desc": "Cette Divinité rapporte 2 Boucliers.",
+          "image": "mars.png",
+          "color": "red"
+        },
+        {
+          "title": "Minerve",
+          "desc": "Le joueur place le pion Minerve sur une case de la Piste Militaire. Si le pion Conflit doit entrer sur la case où le pion Minerve est présent, à la place, il ne bouge pas et son mouve- ment est terminé. Le joueur défausse le pion Minerve.",
+          "image": "minerve.png",
+          "color": "red"
+        },
+        {
+          "title": "Neptune",
+          "desc": "Le joueur choisit et défausse un jeton Mili- taire sans appliquer son effet. Ensuite, il choisit et applique le pouvoir d’un autre jeton Militaire (ce dernier est ensuite défaussé).",
+          "image": "neptune.png",
+          "color": "red"
+        }
+      ]
+    },
+    "senators": {
+      "title": "\uD83E\uDDD1\u200D⚖️ Sénateurs",
+      "items": [
+        {
+          "desc": "Piocher 2 cartes Complot et en conserver 1 au choix",
+          "image": "conspiracy.png"
+        },
+        {
+          "desc": "Placer 1 cube Influence dans la Chambre de votre choix",
+          "image": "cube.png"
+        }
+      ]
+    },
+    "decrees": {
+      "title": "\uD83D\uDCDD Décrets",
+      "items": [
+        {
+          "desc": "Lorsque vous construisez un Bâtiment, vous bénéficiez des chaînages présents sur les cartes construites par votre adversaire comme si vous les possédiez vous-même.",
+          "image": "chain-all.png"
+        },
+        {
+          "desc": "À chaque fois que vous ou votre adversaire construisez une carte de cette couleur, vous prenez autant de Pièces à la Banque que l’Âge en cours (1, 2 ou 3 Pièces).",
+          "image": "earn-building.png"
+        },
+        {
+          "desc": "À chaque fois que vous ou votre adversaire construisez une Merveille, vous prenez autant de Pièces à la Banque que l’Âge en cours (1, 2 ou 3 Pièces).",
+          "image": "earn-wonder.png"
+        },
+        {
+          "desc": "Vous payez 1 Pièce de moins pour chaque ressource (Marron ou Grise) que vous achetez à la Banque.",
+          "image": "less-money.png"
+        },
+        {
+          "desc": "Au moment de déterminer votre nombre d’actions au Sénat, vous ajoutez 2 au nombre total de cartes Bleues que vous possédez.",
+          "image": "more-blue.png"
+        },
+        {
+          "desc": "Lorsque vous défaussez une carte pour prendre des Pièces à la Banque, vous prenez 2 Pièces supplémentaires.",
+          "image": "more-coin.png"
+        },
+        {
+          "desc": "Vous ignorez 1 symbole du coût (ressource ou Pièces, au choix) pour construire les cartes de cette couleur.",
+          "image": "reduction-building.png"
+        },
+        {
+          "desc": "Vous payez 1 ressource de moins (de votre choix) pour construire vos Merveilles.",
+          "image": "reduction-wonder.png"
+        },
+        {
+          "desc": "Lorsque vous recrutez un Comploteur, vous jouez immédiatement un nouveau tour.",
+          "image": "replay.png"
+        },
+        {
+          "desc": "Vous gagnez 1 bouclier et déplacez immédiatement le pion Conflit d’une case vers la capitale adverse.",
+          "image": "shield.png"
+        }
+      ]
+    },
+    "conspiracies": {
+      "title": "\uD83D\uDE08 Conspirations",
+      "items": [
+        {
+          "desc": "Placez dans la défausse 1 carte accessible de la structure. Vous pouvez immédiatement effectuer cette action une seconde fois.",
+          "image": "destroy-structure.png"
+        },
+        {
+          "desc": "Placez dans la défausse 1 carte Bleue de votre choix construite par votre adversaire.",
+          "image": "detroy-blue.png"
+        },
+        {
+          "desc": "Choisissez 1 Merveille adverse construite et placez-la dans la boîte. Elle ne sera plus utilisée pour cette partie, le joueur ne perd pas les effets immédiats précédemment octroyés (pièces, jeton Progrès, carte construite ou défaussée, effet Rejouer, Placement ou Déplacement de cube Influence).",
+          "image": "detroy-wonder.png"
+        },
+        {
+          "desc": "Placez dans la défausse 1 carte Jaune de votre choix construite par votre adversaire.",
+          "image": "detroy-yellow.png"
+        },
+        {
+          "desc": "Gagnez autant de Pièces que vous avez de cubes Influence dans le Sénat.",
+          "image": "earn.png"
+        },
+        {
+          "desc": "Prenez 1 carte Bâtiment placée en fin de structure et construisez ce Bâtiment gratuitement. Les cartes Sénateur ne peuvent pas être choisies.",
+          "image": "free-building.png"
+        },
+        {
+          "desc": " À l’Âge I, prenez les 3 cartes écartées de l’Âge I. À l’Âge II, prenez les 6 cartes écartées des Âges I et II (3 par Âge). À l’Âge III, prenez les 9 cartes écartées des Âges I, II et III (3 par Âge). Regardez-les secrètement et choisissez-en 1 que vous jouez gratuitement.",
+          "image": "free-card.png"
+        },
+        {
+          "desc": "Prenez secrètement tous les jetons Progrès écartés en début de partie et choisissez-en 1 que vous jouez.",
+          "image": "free-progress.png"
+        },
+        {
+          "desc": "Votre adversaire perd autant de Pièces qu’il a de cubes Influence dans le Sénat.",
+          "image": "lose.png"
+        },
+        {
+          "desc": "Placez 1 de vos cubes Influence dans une Chambre de votre choix.",
+          "image": "more-cube.png"
+        },
+        {
+          "desc": "Choisissez 1 Décret du Sénat et déplacez-le vers une Chambre de votre choix, sous le Décret déjà présent.",
+          "image": "move-degree.png"
+        },
+        {
+          "desc": "Vous pouvez déplacer 1 de vos cubes Influence dans une Chambre voisine.",
+          "image": "move.png"
+        },
+        {
+          "desc": "Choisissez 1 Progrès situé sur le plateau ou chez votre adversaire ou hors jeu, et placez-le, face cachée, sur ce Complot. Aucun de vous ne pourra l’utiliser pour cette partie.",
+          "image": "progress.png"
+        },
+        {
+          "desc": "Retirez 1 cube Influence adverse de votre choix du Sénat.",
+          "image": "remove.png"
+        },
+        {
+          "desc": "Volez à votre adversaire 1 carte Marron ou Grise de votre choix et ajoutez-la à votre Cité.",
+          "image": "steal-building.png"
+        },
+        {
+          "desc": "Volez à votre adversaire la moitié de ses Pièces (arrondie en votre faveur) et ajoutez-les à votre Trésor.",
+          "image": "steal-money.png"
+        },
+        {
+          "desc": "Volez à votre adversaire 1 carte Merveille non construite de votre choix et ajoutez-la à votre Cité.",
+          "image": "steal-wonder.png"
+        },
+        {
+          "desc": "Prenez à votre adversaire 1 carte Bleue ou Verte de votre choix et ajoutez-la à votre Cité. En échange, donnez-lui 1 de vos cartes de la même couleur.",
+          "image": "switch-building.png"
+        }
+      ]
+    }
+  },
+  "victories": {
+    "title": "Victoires",
+    "civilian": {
+      "title": "\uD83D\uDD22 Victoire civile",
+      "desc": "Si aucun joueur n’a remporté la victoire par suprématie avant la fin de l’Âge III, le joueur qui totalise le plus de points de victoire remporte la partie. Dans le cas où les deux joueurs sont à égalité, le joueur qui totalise le plus de points de victoire sur ses Bâtiments civils (cartes bleues) remporte la partie.  Une nouvelle égalité n’est pas départagée et les joueurs se partagent la victoire."
+    },
+    "military": {
+      "title": "⚔️ Victoire par suprématie militaire",
+      "desc": "Si le pion Conflit atteint la case capitale de son adversaire, le joueur actif rem- porte immédiatement la partie."
+    },
+    "science": {
+      "title": "\uD83E\uDDEC Victoire par suprématie scientifique",
+      "desc": "Si un joueur réunit 6 symboles scientifiques différents, il remporte immédia- tement la partie."
+    },
+    "political": {
+      "title": "\uD83D\uDCDD Victoire par suprématie politique",
+      "desc": "À tout moment pendant la partie, si vous contrôlez les 6 Chambres du Sénat, vous remportez immédiatement la partie par Suprématie Politique."
+    }
+  },
+  "utilities": {
+    "title": "Outils",
+    "points": {
+      "title": "\uD83D\uDD22 Compteur de points"
+    },
+    "costs": {
+      "title": "\uD83D\uDCB0 Compteur de coûts"
+    }
+  }
+}
