@@ -40,9 +40,9 @@ const Age = () => {
       <div className="space-y-6">
         {(
           [
-            [desired, setDesired],
             [production, setProduction],
             [opponent, setOpponent],
+            [desired, setDesired],
           ] as [
             Record<string, number>,
             React.Dispatch<React.SetStateAction<Record<string, number>>>
@@ -50,9 +50,9 @@ const Age = () => {
         ).map(([get, set], i) => (
           <div key={`counter-${i}`}>
             <h2 className="text-xl font-bold">
-              {i === 0 && t('utilities.costs.desired')}
-              {i === 1 && t('utilities.costs.production')}
-              {i === 2 && t('utilities.costs.opponent')}
+              {i === 0 && t('utilities.costs.production')}
+              {i === 1 && t('utilities.costs.opponent')}
+              {i === 2 && t('utilities.costs.desired')}
             </h2>
             {resources.map(({ slug, icon }) => (
               <div
@@ -94,27 +94,6 @@ const Age = () => {
         ))}
       </div>
 
-      <h2 className="mt-6 text-xl font-bold">{t('utilities.costs.fixed')}</h2>
-      <div className="flex w-full mt-2 isolate -space-x-px shadow-sm">
-        {resources.map(({ slug, icon }, i) => (
-          <button
-            key={`fix-${slug}`}
-            type="button"
-            onClick={() => setFixed({ ...fixed, [slug]: !fixed[slug] })}
-            className={clsx(
-              'relative px-2 text-sm font-medium text-center text-gray-500 bg-white border py-2.5 grow hover:bg-gray-50 focus:z-20',
-              i === 0 && 'rounded-l-md',
-              i === resources.length - 1 && 'rounded-r-md',
-              fixed[slug]
-                ? 'z-10 border-amber-500 bg-amber-50'
-                : 'border-gray-300'
-            )}
-          >
-            {icon}
-          </button>
-        ))}
-      </div>
-
       <h2 className="mt-6 text-xl font-bold">{t('utilities.costs.money')}</h2>
       <div className="flex items-center justify-between mt-2">
         <button
@@ -141,6 +120,27 @@ const Age = () => {
         >
           <PlusIcon className="w-5 h-5" aria-hidden="true" />
         </button>
+      </div>
+
+      <h2 className="mt-6 text-xl font-bold">{t('utilities.costs.fixed')}</h2>
+      <div className="flex w-full mt-2 isolate -space-x-px shadow-sm">
+        {resources.map(({ slug, icon }, i) => (
+          <button
+            key={`fix-${slug}`}
+            type="button"
+            onClick={() => setFixed({ ...fixed, [slug]: !fixed[slug] })}
+            className={clsx(
+              'relative px-2 text-sm font-medium text-center text-gray-500 bg-white border py-2.5 grow hover:bg-gray-50 focus:z-20',
+              i === 0 && 'rounded-l-md',
+              i === resources.length - 1 && 'rounded-r-md',
+              fixed[slug]
+                ? 'z-10 border-amber-500 bg-amber-50'
+                : 'border-gray-300'
+            )}
+          >
+            {icon}
+          </button>
+        ))}
       </div>
 
       <h2 className="mt-12 text-xl font-bold">{t('utilities.costs.cost')}</h2>
