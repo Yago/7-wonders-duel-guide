@@ -55,7 +55,7 @@ const Age = () => {
                   {t('utilities.costs.fixed')}
                 </h2>
                 <div className="flex w-full mt-2 mb-6 isolate -space-x-px shadow-sm">
-                  {resources.map(({ slug, icon }, i) => (
+                  {resources.map(({ slug, icon }, index) => (
                     <button
                       key={`fix-${slug}`}
                       type="button"
@@ -64,8 +64,8 @@ const Age = () => {
                       }
                       className={clsx(
                         'relative px-2 text-sm font-medium text-center text-gray-500 bg-white border py-2.5 grow hover:bg-gray-50 focus:z-20',
-                        i === 0 && 'rounded-l-md',
-                        i === resources.length - 1 && 'rounded-r-md',
+                        index === 0 && 'rounded-l-md',
+                        index === resources.length - 1 && 'rounded-r-md',
                         fixed[slug]
                           ? 'z-10 border-amber-500 bg-amber-50'
                           : 'border-gray-300'
