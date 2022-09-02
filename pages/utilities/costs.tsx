@@ -148,8 +148,11 @@ const Age = () => {
         {resources.reduce(
           (acc, { slug }) =>
             acc +
-            (desired[slug] - production[slug]) *
-              (2 + (!fixed[slug] ? opponent[slug] : 0)),
+            Math.max(
+              (desired[slug] - production[slug]) *
+                (2 + (!fixed[slug] ? opponent[slug] : 0)),
+              0
+            ),
           0
         ) + money}{' '}
         🪙
