@@ -150,7 +150,7 @@ const Age = () => {
             acc +
             Math.max(
               (desired[slug] - production[slug]) *
-                (2 + (!fixed[slug] ? opponent[slug] : 0)),
+                (!fixed[slug] ? 2 + opponent[slug] : 1),
               0
             ),
           0
