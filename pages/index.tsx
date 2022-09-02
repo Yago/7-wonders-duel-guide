@@ -133,6 +133,8 @@ const Home: NextPage = () => {
           { label: t('utilities.costs.title'), link: '/utilities/costs' },
         ]}
       />
+
+      <img src="/images/qr.png" alt="qr-code" className="mx-auto my-20 w-36" />
     </div>
   );
 };
