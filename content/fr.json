@@ -472,7 +472,7 @@
       ]
     },
     "conspiracies": {
-      "title": "\uD83D\uDE08 Conspirations",
+      "title": "\uD83D\uDE08 Complots",
       "items": [
         {
           "desc": "Placez dans la défausse 1 carte accessible de la structure. Vous pouvez immédiatement effectuer cette action une seconde fois.",
@@ -574,7 +574,13 @@
       "title": "\uD83D\uDD22 Compteur de points"
     },
     "costs": {
-      "title": "\uD83D\uDCB0 Compteur de coûts"
+      "title": "\uD83D\uDCB0 Compteur de coûts",
+      "desired": "Resource à acheter",
+      "production": "Production",
+      "opponent": "Adversaire",
+      "money": "Pièces",
+      "fixed": "Prix fixes",
+      "cost": "Coût final"
     }
   }
 }

@@ -9,9 +9,9 @@ Appliquez ensuite l’effet de ce Sénateur selon qu’il s’agit d’un Politi
 ### Politicien
 Lorsque vous recrutez un Politicien, vous pouvez effectuer un nombre d’actions au Sénat défini par la quantité de cartes Bleues présentes dans votre Cité :
 
-| Nombre de cartes Bleues dans votre Cité | 0-1 | 2-3 | 4+ |
-|-----------------------------------------|-----|-----|----|
-| Nombre d’actions au Sénat               | 1   | 2   | 3  |
+| Cartes Bleues construites | 0-1 | 2-3 | 4+ |
+|---------------------------|-----|-----|----|
+| Nombre d’actions au Sénat | 1   | 2   | 3  |
 
 Il existe 2 actions possibles au Sénat : le Placement d’Influence et le Déplacement d’Influence. Pour chacune de vos actions au Sénat, vous pouvez librement choisir entre **Placement** et **Déplacement**.
 

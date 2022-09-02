@@ -7,27 +7,29 @@ const Age = () => {
   const { t } = useTranslation();
 
   return (
-    <Layout title={t(`symbols.buildings.title`)} container>
+    <Layout title={t(`symbols.gods.title`)} container>
       <table className="border-t border-gray-200 table-auto">
         <tbody>
           {(
-            t('symbols.buildings.items', { returnObjects: true }) as {
+            t('symbols.gods.items', { returnObjects: true }) as {
+              title: string;
               desc: string;
               image: string;
             }[]
-          )?.map(({ desc, image }) => (
+          )?.map(({ title, desc, image }) => (
             <tr key={image}>
               <td className="py-6 align-top border-b border-gray-300">
-                <div className="w-20 h-12">
+                <div className="w-16 h-12">
                   <img
-                    className="object-contain object-right w-20 h-12"
-                    src={`/images/symbols/buildings/${image}`}
+                    className="object-contain object-right w-16 h-12"
+                    src={`/images/symbols/gods/${image}`}
                     alt={desc}
                   />
                 </div>
               </td>
               <td className="py-6 pl-4 align-top border-b border-gray-300 whitespace-3rap">
-                <p className="text-sm text-gray-900">{desc}</p>
+                <h2 className="text-sm font-bold  text-gray-900">{title}</h2>
+                <p className="mt-1 text-sm text-gray-900">{desc}</p>
               </td>
             </tr>
           ))}

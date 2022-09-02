@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export type Props = {
   title: string;
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   container?: boolean;
 };
 
@@ -22,7 +22,9 @@ const Layout = ({ title, children, container = false }: Props): JSX.Element => (
           </a>
         </Link>
       </span>
-      <span className="text-center">{title.split(' ').slice(1).join(' ')}</span>
+      <span className="overflow-hidden text-center text-ellipsis whitespace-nowrap">
+        {title.split(' ').slice(1).join(' ')}
+      </span>
     </header>
     <main className={clsx(container && 'max-w-lg px-4 py-6 mx-auto')}>
       {children}
