@@ -13,7 +13,12 @@ const StackedList = ({ items }: Props): JSX.Element => (
     <ul className="divide-y divide-gray-200">
       {items.map(({ label, link }) => (
         <li key={label}>
-          <a href={link} className="block hover:bg-gray-50">
+          <a
+            href={link}
+            className="block hover:bg-gray-50"
+            target={link === '/utilities/costs' ? '_blank' : undefined}
+            rel="noreferrer"
+          >
             <div className="flex items-center px-4 py-4">
               <div className="flex items-center flex-1 min-w-0">
                 <div className="flex-1 min-w-0 pr-4 md:grid md:grid-cols-2 md:gap-4">
