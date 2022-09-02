@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronLeftIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
+import Head from 'next/head';
 import Link from 'next/link';
 
 export type Props = {
@@ -11,6 +12,10 @@ export type Props = {
 
 const Layout = ({ title, children, container = false }: Props): JSX.Element => (
   <>
+    <Head>
+      <title>7 Wonders Duel Companion</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <header className="items-center px-4 py-2 bg-white shadow-md grid grid-cols-[2fr_8fr_2fr]">
       <span className="flex">
         <Link href="/">
