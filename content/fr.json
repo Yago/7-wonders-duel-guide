@@ -571,7 +571,11 @@
   "utilities": {
     "title": "Outils",
     "points": {
-      "title": "\uD83D\uDD22 Compteur de points"
+      "title": "\uD83D\uDD22 Compteur de points",
+      "player_name": "Nom joueur",
+      "win_with": "gagne avec",
+      "points": "points",
+      "equal": "Égalité !"
     },
     "costs": {
       "title": "\uD83D\uDCB0 Compteur de coûts",

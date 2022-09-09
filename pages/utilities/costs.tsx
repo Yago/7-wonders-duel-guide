@@ -151,7 +151,7 @@ const Age = () => {
       </div>
 
       <h2 className="mt-12 text-xl font-bold">{t('utilities.costs.cost')}</h2>
-      <p className="py-12 mt-2 text-4xl font-bold text-center border bg-amber-100 rounded-xl border-amber-700">
+      <p className="py-12 mt-2 mb-6 text-4xl font-bold text-center border bg-amber-100 rounded-xl border-amber-700">
         {resources.reduce(
           (acc, { slug }) =>
             acc +
