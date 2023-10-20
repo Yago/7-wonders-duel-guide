@@ -1,12 +1,18 @@
 # Age I
 
+**Sans Agora**
+![board](/images/age-i-without.png)
+
+**Avec Agora**
+![board](/images/age-i.png)
+
 ## Général
 - Placez le plateau entre les deux joueurs, sur un côté de l’aire de jeu.
 - Placez le pion Conflit sur la case neutre au milieu du plateau.
 - Placez les 4 jetons Militaire sur leurs emplacements, face visible.
 - Mélangez les jetons Progrès et placez-en 5 au hasard, face visible, sur le plateau. Remettez les autres dans la boîte.
 - Chaque joueur prend 7 pièces à la banque.
-- Sélésctionner les Merveilles
+- Sélectionner les Merveilles
   - Désignez un premier joueur.
   - Mélangez les 12 cartes Merveille.
   - Disposez 4 Merveilles aléatoires, face visible, entre les deux joueurs.
@@ -36,5 +42,4 @@
 - Préparez la structure de cartes de l’Âge I
 
 ![board](/images/board-age-i.jpg)
-![board](/images/age-i.png)
 

@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MinusIcon, PlusIcon } from '@heroicons/react/solid';
+import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
 
 import Layout from '../../components/Layout';

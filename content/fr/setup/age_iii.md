@@ -1,5 +1,9 @@
 # Age III
 
+**Sans Agora**
+![board](/images/age-iii-without.png)
+
+**Avec Agora**
 ![board](/images/age-iii.png)
 
 ## Panthéon
