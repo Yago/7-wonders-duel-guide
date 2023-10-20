@@ -45,7 +45,7 @@ const Age = () => {
             [desired, setDesired],
           ] as [
             Record<string, number>,
-            React.Dispatch<React.SetStateAction<Record<string, number>>>
+            React.Dispatch<React.SetStateAction<Record<string, number>>>,
           ][]
         ).map(([get, set], i) => (
           <div key={`counter-${i}`}>

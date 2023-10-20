@@ -19,10 +19,10 @@ const Layout = ({ title, children, container = false }: Props): JSX.Element => (
     <header className="items-center px-4 py-2 bg-white shadow-md grid grid-cols-[2fr_8fr_2fr]">
       <span className="flex">
         <Link href="/" className="inline-block p-2">
-            <ChevronLeftIcon
-              className="w-5 h-5 text-gray-400"
-              aria-hidden="true"
-            />
+          <ChevronLeftIcon
+            className="w-5 h-5 text-gray-400"
+            aria-hidden="true"
+          />
         </Link>
       </span>
       <span className="overflow-hidden text-center text-ellipsis whitespace-nowrap">
